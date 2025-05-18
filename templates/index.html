@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Society</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #800080; 
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #804cb4;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .sections {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .section {
+            flex: 1;
+            padding: 15px;
+            background: #ffffff;
+            border-radius: 5px;
+        }
+        .section.good {
+            border-top: 4px solid #27ae60;
+        }
+        .section.bad {
+            border-top: 4px solid #e74c3c;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .signup-btn {
+            display: block;
+            width: 300px; /* Increased from 200px */
+            font-size: 1.5em; /* Make text larger */
+            margin: 40px auto; /* Slightly more margin */
+            padding: 20px; /* Increased padding */
+            background: #3498db;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .signup-btn:hover {
+            background: #2980b9;
+        }
+        .problem {
+            text-align: center;
+            font-size: 24px;
+            margin: 20px 0;
+            padding: 15px;
+            background: #f1c40f;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="{{ url_for('static', filename='image.png') }}" alt="Math Society Banner" style="max-width: 100%; height: auto;">
+        </div>
+
+        <div class="problem">
+            <p>CAN YOU SOLVE THIS PROBLEM?</p>
+            <p>2 + 2 = ?</p>
+            <p>IF SO, WE WANT YOU!</p>
+        </div>
+
+        <div class="sections">
+            <div class="section good">
+                <h2>Are you GOOD at math?</h2>
+                <h3>HERE'S WHAT YOU CAN EXPECT:</h3>
+                <ul>
+                    <li>Math Competitionall</li>
+                    <li>ARML, Purple Comet, AMC, etc.</li>
+                    <li>Practice Common Problems & Techniques Needed for Olympiads</li>
+                    <li>Extracurricular Math Concepts & Ideas</li>
+                    <li>Benefit and learn from each other's experience and knowledge!</li>
+                    <li>Foster an actual love for math instead of being forced to learn it?</li>
+                    <li>Resources and Space to Foster Curiosity!</li>
+                    <li>Ever wanted to know Ptolemy's theorem for Cyclic Quadrilaterals?? No??? Well you will!!!</li>
+                </ul>
+            </div>
+
+            <div class="section bad">
+                <h2>Are you BAD at math?</h2>
+                <h3>HERE'S WHAT YOU CAN EXPECT:</h3>
+                <ul>
+                    <li>Tutoring Starting At YOUR Level!</li>
+                    <li>Actually interesting mathematical concepts and ideas</li>
+                    <li>Academic Support!</li>
+                    <li>Advice tailored to the curriculum, if need be, starting from the basics</li>
+                    <li>Foster an actual love for math instead of hatred!</li>
+                    <li>No more Dr. Frost or Mathspace!</li>
+                    <li>Problems that practice creative thinking rather than one particular skill</li>
+                    <li>Benefit and learn from each other's experience and knowledge!</li>
+                </ul>
+            </div>
+        </div>
+
+        <a href="/signup" class="signup-btn">SIGN UP NOW!</a>
+    </div>
+</body>
+</html>
